@@ -20,8 +20,9 @@ git clone https://github.com/DevnandanRaj/Job-Application-Management.git
 cd job-application-management
 ```
 
-###. API Endpoints
-User Endpoints
+## API Endpoints
+
+## User Endpoints
 POST /users/signup: Register a new user
 
 Request Body: { "username": "username", "email": "user@example.com", "password": "password" }
@@ -32,14 +33,15 @@ POST /users/login: Log in an existing user
 
 Request Body: { "email": "user@example.com", "password": "password" }
 Response: {"token": "jwt_token" }
-Job Endpoints
+
+## Job Endpoints
 POST /jobs: Add a new job position
 
 Request Body: { "title": "Job Title", "department": "Department", "description": "Job Description", "openDate": "YYYY-MM-DD" }
 Response: { "job": { ... } }
 GET /jobs: Retrieve a list of all job positions
 
-Applicant Endpoints
+## Applicant Endpoints
 POST /applicants: Add a new applicant for a specific job
 
 Request Body: { "jobId": 1, "name": "Applicant Name", "email": "applicant@example.com", "resumeLink": "http://resume.link", "status": "Pending" }
@@ -52,7 +54,7 @@ Request Body: { "status": "Interviewed" }
 Response: { "applicant": { ... } }
 DELETE /applicants/{applicantId}: Delete an applicant from the database
 
-Interview Endpoints
+## Interview Endpoints
 GET /interviews?applicantId={applicantId}: Fetch interview details for a specific applicant
 
 POST /interviews: Schedule an interview
