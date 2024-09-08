@@ -13,14 +13,14 @@ Before you begin, ensure you have the following installed:
 
 ## Setup
 
-### 1. Clone the Repository
+###. Clone the Repository
 
 ```bash
 git clone https://github.com/DevnandanRaj/Job-Application-Management.git
 cd job-application-management
 
 
-API Endpoints
+###. API Endpoints
 User Endpoints
 POST /users/signup: Register a new user
 
