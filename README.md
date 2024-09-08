@@ -18,7 +18,7 @@ Before you begin, ensure you have the following installed:
 ```bash
 git clone https://github.com/DevnandanRaj/Job-Application-Management.git
 cd job-application-management
-
+```
 
 ###. API Endpoints
 User Endpoints
