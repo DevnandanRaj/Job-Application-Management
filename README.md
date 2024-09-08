@@ -26,38 +26,48 @@ cd job-application-management
 POST /users/signup: Register a new user
 
 Request Body: { "username": "username", "email": "user@example.com", "password": "password" }
+
 Response: {"message": "User registered successfully"}
 
 
 POST /users/login: Log in an existing user
 
 Request Body: { "email": "user@example.com", "password": "password" }
+
 Response: {"token": "jwt_token" }
 
 ## Job Endpoints
 POST /jobs: Add a new job position
 
 Request Body: { "title": "Job Title", "department": "Department", "description": "Job Description", "openDate": "YYYY-MM-DD" }
+
 Response: { "job": { ... } }
+
 GET /jobs: Retrieve a list of all job positions
 
 ## Applicant Endpoints
 POST /applicants: Add a new applicant for a specific job
 
 Request Body: { "jobId": 1, "name": "Applicant Name", "email": "applicant@example.com", "resumeLink": "http://resume.link", "status": "Pending" }
+
 Response: { "applicant": { ... } }
+
 GET /applicants?jobId={jobId}: Retrieve a list of all applicants for a specific job
 
 PATCH /applicants/{applicantId}: Update the status of an applicant
 
 Request Body: { "status": "Interviewed" }
+
 Response: { "applicant": { ... } }
+
 DELETE /applicants/{applicantId}: Delete an applicant from the database
 
 ## Interview Endpoints
 GET /interviews?applicantId={applicantId}: Fetch interview details for a specific applicant
 
+Response: { "interview": { ... } }
 POST /interviews: Schedule an interview
 
 Request Body: { "applicantId": 1, "interviewDate": "YYYY-MM-DD", "interviewerName": "Interviewer Name" }
+
 Response: { "interview": { ... } }
