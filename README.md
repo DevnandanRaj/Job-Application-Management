@@ -23,14 +23,14 @@ cd job-application-management
 ## API Endpoints
 
 ## User Endpoints
-POST /users/signup: Register a new user
+POST /auth/register: Register a new user
 
 Request Body: { "username": "username", "email": "user@example.com", "password": "password" }
 
 Response: {"message": "User registered successfully"}
 
 
-POST /users/login: Log in an existing user
+POST /auth/login: Log in an existing user
 
 Request Body: { "email": "user@example.com", "password": "password" }
 
